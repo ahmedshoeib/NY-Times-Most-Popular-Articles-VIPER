@@ -18,10 +18,10 @@ final class ArticleMostPopularModule {
     private var interactor: ArticleMostPopularPresenterToInteractorProtocol
     private var presenter: ArticleMostPopularPresenterProtocol
         
-    init(view: ArticleMostPopularPresenterToViewProtocol = ArticlesMostPopularViewController(),
-         router: ArticleMostPopularPresenterToRouterProtocol = ArticlesMostPopularRouter(),
-         interactor: ArticleMostPopularPresenterToInteractorProtocol = ArticleMostPopularInteractor(),
-         presenter: ArticleMostPopularPresenterProtocol = ArticleMostPopularPresenter()) {
+    init(view: ArticleMostPopularPresenterToViewProtocol,
+         router: ArticleMostPopularPresenterToRouterProtocol,
+         interactor: ArticleMostPopularPresenterToInteractorProtocol,
+         presenter: ArticleMostPopularPresenterProtocol) {
         self.view = view
         self.router = router
         self.interactor = interactor

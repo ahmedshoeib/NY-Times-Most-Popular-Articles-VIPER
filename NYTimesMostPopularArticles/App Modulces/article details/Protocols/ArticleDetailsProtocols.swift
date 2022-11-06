@@ -15,12 +15,16 @@ protocol ArticleDetailsViewToPresenterProtocol {
     var article: MostPopularArticle {get}
     var view: ArticleDetailsPresenterToViewProtocol? {get set}
     var router: ArticleDetailsPresenterToRouterProtocol? {get set}
+    
+    func viewDidLoad()
 }
 
 //MARK: Presenter To View Protocol
 protocol ArticleDetailsPresenterToViewProtocol {
     // variables
     var presenter: ArticleDetailsViewToPresenterProtocol? {get set}
+    
+    func setupView(with article: MostPopularArticle)
 }
 
 //MARK: Presenter To Router Protocol

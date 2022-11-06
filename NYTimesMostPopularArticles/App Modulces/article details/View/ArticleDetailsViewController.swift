@@ -26,29 +26,29 @@ class ArticleDetailsViewController: UIViewController {
         
         setupView()
         
+        presenter?.viewDidLoad()
+        
     }
 
 
     func setupView() {
         title = "Article Details"
-        
-        let article = presenter?.article
-        
-        articleTilleLabel.text = article?.title ?? ""
-        articleAbstractLabel.text = article?.abstract ?? ""
-        articleAuthorLabel.text = article?.byline
-        articlePublishedDateLabel.text = article?.publishedDate ?? ""
-        
-        if let url = article?.media.first?.mediaMetadata.first?.url {
-            articleImageView.downloaded(from: url)
-        }else{
-            articleImageView.fill(with: .lightGray)
-        }
     }
 }
 
 // MARK: - Presenter To View Protocol
 extension ArticleDetailsViewController: ArticleDetailsPresenterToViewProtocol {
     
-   
+    func setupView(with article: MostPopularArticle) {
+        articleTilleLabel.text = article.title
+        articleAbstractLabel.text = article.abstract
+        articleAuthorLabel.text = article.byline
+        articlePublishedDateLabel.text = article.publishedDate
+        
+        if let url = article.media.first?.mediaMetadata.first?.url {
+            articleImageView.downloaded(from: url)
+        }else{
+            articleImageView.fill(with: .lightGray)
+        }
+    }
 }

@@ -14,7 +14,7 @@ class ArticleMostPopularInteractor: ArticleMostPopularPresenterToInteractorProto
     
     var repository: ArticleMostPopularRepositoryProtocol?
     
-    init(presenter: ArticleMostPopularInteractorToPresenterProtocol? = ArticleMostPopularPresenter(), repository: ArticleMostPopularRepositoryProtocol? = ArcticleMostPopularRepository()) {
+    init(presenter: ArticleMostPopularInteractorToPresenterProtocol? = ArticleMostPopularPresenter(), repository: ArticleMostPopularRepositoryProtocol) {
         self.presenter = presenter
         self.repository = repository
     }

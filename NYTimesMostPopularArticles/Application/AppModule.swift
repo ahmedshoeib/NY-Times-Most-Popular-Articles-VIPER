@@ -13,16 +13,23 @@ protocol AppModule {
 
 
 protocol ModuleFactoryProtocol {
-    func createArticleMostPopularModule(using navigationController: UINavigationController) -> ArticleMostPopularModule
+    func createArticleMostPopularModule(using navigationController: UINavigationController, testing:Bool) -> ArticleMostPopularModule
     func createArticleDetailsModule(using navigationController: UINavigationController, article: MostPopularArticle) -> ArticleDetailsModule
 }
 
 
 struct ModuleFactory: ModuleFactoryProtocol {
-    func createArticleMostPopularModule(using navigationController: UINavigationController = UINavigationController()) -> ArticleMostPopularModule {
-        let router = ArticlesMostPopularRouter(navigationController: navigationController, moduleFactory: self)
+    func createArticleMostPopularModule(using navigationController: UINavigationController = UINavigationController(), testing:Bool) -> ArticleMostPopularModule {
+        
+        let networkService = NetworkService()
+        let repository = ArcticleMostPopularRepository(service: networkService,testing: testing)
         let view: ArticlesMostPopularViewController = UIStoryboard.mainstoryboard.instantiateViewController(withIdentifier: "ArticlesMostPopularViewController") as! ArticlesMostPopularViewController
-        return ArticleMostPopularModule(view: view, router: router)
+        let interactor: ArticleMostPopularPresenterToInteractorProtocol = ArticleMostPopularInteractor(repository: repository)
+        let presenter: ArticleMostPopularPresenterProtocol = ArticleMostPopularPresenter()
+        
+        let router = ArticlesMostPopularRouter(navigationController: navigationController, moduleFactory: self)
+        
+        return ArticleMostPopularModule(view: view, router: router, interactor: interactor, presenter: presenter)
     }
     
     func createArticleDetailsModule(using navigationController: UINavigationController, article: MostPopularArticle) -> ArticleDetailsModule {

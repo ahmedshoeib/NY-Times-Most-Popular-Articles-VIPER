@@ -11,13 +11,14 @@ import XCTest
 class ArticleMostPopularInteractorTests: XCTestCase {
 
     var presenter = MockArticleMostPopularPresenter()
-    var Interactor = ArticleMostPopularInteractor()
+    var Interactor: ArticleMostPopularInteractor!
     var repository: MockArticleMostPopularRepository!
     
     override func setUp() {
         let availableRechability = MockAvailableReachability()
         let mockService = MockgetArcticleMostPopularListNetworkService(reachability: availableRechability)
-        repository = MockArticleMostPopularRepository(service: mockService)
+        repository = MockArticleMostPopularRepository(service: mockService, testing: true)
+        Interactor = ArticleMostPopularInteractor(repository: repository)
         Interactor.presenter = presenter
         Interactor.repository = repository
     }

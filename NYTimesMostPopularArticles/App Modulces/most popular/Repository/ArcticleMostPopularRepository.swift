@@ -8,7 +8,7 @@
 protocol ArticleMostPopularRepositoryProtocol {
     var service: Service {get set}
     func getMostPopularArticles(resultHandler: @escaping (Result<ArcticleMostPopularModel, AppErrror>) -> Void)
-    init(service: Service)
+    init(service: Service, testing:Bool)
 }
 
 
@@ -16,13 +16,18 @@ protocol ArticleMostPopularRepositoryProtocol {
 class ArcticleMostPopularRepository: ArticleMostPopularRepositoryProtocol {
     
     var service: Service
-    
-    required init(service: Service = NetworkService()) {
+    var testing:Bool
+    required init(service: Service, testing:Bool) {
         self.service = service
+        self.testing = testing
     }
     
     func getMostPopularArticles(resultHandler: @escaping (Result<ArcticleMostPopularModel, AppErrror>) -> Void) {
         
+        if testing {
+            resultHandler(.success(MockResponses.getArcticleMostPopularList()))
+            return
+        }
         let request = ArcticleMostPopularRequest()
 
         return service.build(request: request, completion: resultHandler)

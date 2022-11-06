@@ -9,6 +9,7 @@ import Foundation
 
 
 class ArticleDetailsPresenter: ArticleDetailsViewToPresenterProtocol {
+    
     var view: ArticleDetailsPresenterToViewProtocol?
 
     var router: ArticleDetailsPresenterToRouterProtocol?
@@ -18,5 +19,8 @@ class ArticleDetailsPresenter: ArticleDetailsViewToPresenterProtocol {
     init(article: MostPopularArticle) {
         self.article = article
     }
-        
+       
+    func viewDidLoad() {
+        view?.setupView(with: article)
+    }
 }

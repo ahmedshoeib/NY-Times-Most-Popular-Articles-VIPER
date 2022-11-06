@@ -24,6 +24,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="763"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <sections/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="articleTableView"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="Eld-IN-CEf"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="VcC-Jl-ivo"/>
@@ -78,11 +81,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="MeK-nt-48B"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="25"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rxV-XT-oaN">
                                                         <rect key="frame" x="20" y="220.00000000000003" width="350" height="91.333333333333343"/>

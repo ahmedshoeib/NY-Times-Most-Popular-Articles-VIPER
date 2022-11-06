@@ -18,9 +18,9 @@ struct AppLoader {
         self.moduleFactory = moduleFactory
     }
     
-    mutating func build(forWindow window: UIWindow) {
+    mutating func build(forWindow window: UIWindow, testing: Bool) {
         self.window = window
-        let module = moduleFactory.createArticleMostPopularModule(using: navigationController)
+        let module = moduleFactory.createArticleMostPopularModule(using: navigationController, testing: testing)
         let viewController = module.assemble()
         setRootViewController(viewController)
     }

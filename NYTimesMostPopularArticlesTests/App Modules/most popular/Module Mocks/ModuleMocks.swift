@@ -52,7 +52,7 @@ class MockArticleMostPopularRepository: ArticleMostPopularRepositoryProtocol {
     var service: Service
     var currentError: AppErrror?
     var arcticleMostPopularModel: ArcticleMostPopularModel?
-
+    
     func getMostPopularArticles(resultHandler: @escaping (Result<ArcticleMostPopularModel, AppErrror>) -> Void) {
         
         if let currentError = currentError {
@@ -64,7 +64,7 @@ class MockArticleMostPopularRepository: ArticleMostPopularRepositoryProtocol {
         
     }
     
-    required init(service: Service) {
+    required init(service: Service, testing: Bool) {
         self.service = service
     }
 }
