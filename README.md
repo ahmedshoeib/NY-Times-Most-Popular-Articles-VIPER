@@ -9,14 +9,7 @@ This is a demo that hits the NY Times most popular articles API and show a list 
 
 App developed using Xcode 14.0, minimum iOS Version: 13.0
 
-
-**VIPER** stands for:
-V -> View
-I -> Interactor
-P -> Presenter
-E -> Entity
-R -> Router
-
+<br/><br/><br/>
 
 **Demo App Viper Components**
 
@@ -29,13 +22,16 @@ Presenter (Prepare Business logic for presentation in the View)
 Entity (Model)
 Router (Take control of Routing)
 
+**Main VIPER architecture compoment and interactions**
+
+![image](https://user-images.githubusercontent.com/8080426/200169881-21840360-53f2-462d-8294-03dd08cf66f7.png)
+
+
 **additional modules added to the app:**
 Repository (Api/DB Calls)
 Module Factory (Assemble the VIPER module)
 
-**Main VIPER architecture compoment and interactions**
-
-![image](https://user-images.githubusercontent.com/8080426/200169881-21840360-53f2-462d-8294-03dd08cf66f7.png)
+<br/><br/><br/>
 
 **Unit Testing**
 
@@ -43,6 +39,7 @@ Module Factory (Assemble the VIPER module)
 
 One of the advantages of the separation VIPER endorses is in testability. You can test the interactor so that it can read and manipulate the data model. And you can do all that while independently testing the presenter to change the view and respond to user actions.
 
+<br/><br/><br/>
 
 **Run Unit Test**
 
@@ -51,6 +48,8 @@ One of the advantages of the separation VIPER endorses is in testability. You ca
 1. open terminal 
 2. cd to app main folder
 3. execute this command "./RunTestCases.sh"
+
+<br/><br/><br/>
 
 **App ScreenShots**
 
