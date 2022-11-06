@@ -3,7 +3,7 @@
 
 This is a demo that hits the NY Times most popular articles API and show a list of articles, that shows details when items on the list are tapped using VIPER Architecture.
 
-<br/><br/>
+<br/>
 
 **App Build/Run Details** 
 
@@ -11,7 +11,7 @@ This is a demo that hits the NY Times most popular articles API and show a list 
 
 App developed using Xcode 14.0, minimum iOS Version: 13.0
 
-<br/><br/>
+<br/>
 
 **Demo App Viper Components**
 
@@ -41,7 +41,7 @@ Router (Take control of Routing) <br/>
 
 One of the advantages of the separation VIPER endorses is in testability. You can test the interactor so that it can read and manipulate the data model. And you can do all that while independently testing the presenter to change the view and respond to user actions.
 
-<br/><br/>
+<br/>
 
 **Run Unit Test**
 
@@ -51,7 +51,11 @@ One of the advantages of the separation VIPER endorses is in testability. You ca
 2. cd to app main folder <br/>
 3. execute this command "./RunTestCases.sh"
 
-<br/><br/>
+
+**Note:** make sure you have unit test destination as mentioned in **RunTestCases.sh** file 'platform=iOS Simulator,name=iPhone 14,OS=16.0' otherwise please update it before you run the test 
+
+<br/>
+
 
 **App ScreenShots**
 
