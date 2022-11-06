@@ -47,9 +47,9 @@ One of the advantages of the separation VIPER endorses is in testability. You ca
 
 -----------------------------------------
 
-running unit test automated for every push/pull-request on main branch using Github WorkFlows <br/><br/>
+Running unit test automated for every push/pull-request on main branch using Github WorkFlows <br/>
 
-for Manual test run follow below steps:<br/>
+For Manual test run follow below steps:<br/>
 1. open terminal <br/>
 2. cd to app main folder <br/>
   a. for unit tests run below command <br/>
