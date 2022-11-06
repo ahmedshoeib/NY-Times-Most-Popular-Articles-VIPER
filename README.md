@@ -49,10 +49,10 @@ One of the advantages of the separation VIPER endorses is in testability. You ca
 
 1. open terminal <br/>
 2. cd to app main folder <br/>
-for unit tests run below command <br/>
-./RunUnitTestCases.sh <br/>
-for ui tests run below command <br/>
-./RunUITestCases.sh <br/>
+  a. for unit tests run below command <br/>
+     ./RunUnitTestCases.sh <br/>
+  b. for ui tests run below command <br/>
+     ./RunUITestCases.sh <br/>
 
 
 **Note:** make sure you have unit test destination as mentioned in **RunTestCases.sh** file 'platform=iOS Simulator,name=iPhone 14,OS=16.0' otherwise please update it before you run the test 
@@ -68,4 +68,4 @@ for ui tests run below command <br/>
 ![image](https://user-images.githubusercontent.com/8080426/200169271-02345b2d-a71e-4c3c-8019-0294029634ce.png)
 
 **2. Details Screen**
-![image](https://user-images.githubusercontent.com/8080426/200169295-8f015206-b213-4c0d-9ae4-330dad8e7ccf.png)
+![image](https://user-images.githubusercontent.com/8080426/200188258-6054a288-ec14-4e8b-8d55-2c2666dc920f.png)
