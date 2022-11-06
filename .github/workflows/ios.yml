@@ -13,9 +13,9 @@ on:
         - warning
         - debug 
   push:
-    branches: [ "main" ]
+    branches: [ "workflow" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "workflow" ]
 
 jobs:
   build:
