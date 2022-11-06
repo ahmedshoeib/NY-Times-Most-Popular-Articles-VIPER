@@ -16,7 +16,7 @@ App developed using Xcode 14.0, minimum iOS Version: 13.0
 **Demo App Viper Components**
 
 -----------------------------------------
-Each VIPER module consists of the following parts: <br/><br/>
+Each VIPER module consists of the following parts: <br/>
 
 View (View, ViewController, Cells) <br/>
 Interactor (Business Logic, Use Cases) <br/>
